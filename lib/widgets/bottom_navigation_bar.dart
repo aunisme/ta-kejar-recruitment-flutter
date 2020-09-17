@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kejar_recruitment/constants/colors_const.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kejar_recruitment/constants/styles_const.dart';
 
 class BottomNavigation extends StatefulWidget {
   @override
@@ -10,9 +11,6 @@ class BottomNavigation extends StatefulWidget {
 
 class _BottomNavigationState extends State<BottomNavigation> {
   int _selectedIndex = 0;
-
-  var bottomTextStyle =
-      GoogleFonts.inter(fontSize: 12, fontWeight: FontWeight.w500);
 
   void _onItemTapped(int index) {
     setState(() {
@@ -23,7 +21,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 64,
+      height: 70,
       decoration: BoxDecoration(
         color: mFillColor,
         boxShadow: [
@@ -41,41 +39,33 @@ class _BottomNavigationState extends State<BottomNavigation> {
       child: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: _selectedIndex == 0
-                ? new SvgPicture.asset('assets/icons/home_colored.svg')
-                : new SvgPicture.asset('assets/icons/home.svg'),
+              icon: SvgPicture.asset('assets/icons/home.svg'),
+              activeIcon: SvgPicture.asset('assets/icons/home_active.svg'),
+              title: Text(
+                'Home',
+                style: mBottomText,
+              )),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              'assets/icons/notification.svg',
+              placeholderBuilder: (BuildContext context) => Container(
+                padding: EdgeInsets.only(bottom: 10),
+              ),
+            ),
+            activeIcon:
+                SvgPicture.asset('assets/icons/notification_active.svg'),
             title: Text(
-              'Home',
-              style: bottomTextStyle,
+              'Notification',
+              style: mBottomText,
             ),
           ),
           BottomNavigationBarItem(
-            icon: _selectedIndex == 1
-                ? new SvgPicture.asset('assets/icons/order_colored.svg')
-                : new SvgPicture.asset('assets/icons/order.svg'),
-            title: Text(
-              'My Order',
-              style: bottomTextStyle,
-            ),
-          ),
-          BottomNavigationBarItem(
-            icon: _selectedIndex == 2
-                ? new SvgPicture.asset('assets/icons/watch_colored.svg')
-                : new SvgPicture.asset('assets/icons/watch.svg'),
-            title: Text(
-              'Watch List',
-              style: bottomTextStyle,
-            ),
-          ),
-          BottomNavigationBarItem(
-            icon: _selectedIndex == 3
-                ? new SvgPicture.asset('assets/icons/account_colored.svg')
-                : new SvgPicture.asset('assets/icons/account.svg'),
-            title: Text(
-              'Account',
-              style: bottomTextStyle,
-            ),
-          ),
+              icon: SvgPicture.asset('assets/icons/profile.svg'),
+              activeIcon: SvgPicture.asset('assets/icons/profile_active.svg'),
+              title: Text(
+                'Profile',
+                style: mBottomText,
+              )),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: mBlueColor,
@@ -84,7 +74,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         backgroundColor: Colors.transparent,
         type: BottomNavigationBarType.fixed,
         selectedFontSize: 12,
-        showUnselectedLabels: true,
+        showUnselectedLabels: false,
         elevation: 0,
       ),
     );

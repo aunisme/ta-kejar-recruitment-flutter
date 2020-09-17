@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kejar_recruitment/screens/home_screen.dart';
+import './screens/screens.dart';
+import 'constants/constants.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,7 +9,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Travelkuy',
+      title: 'Kejar Recruitment',
+      theme: ThemeData(
+          primaryColor: Colors.blue,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          scaffoldBackgroundColor: mFillColor),
       home: HomeScreen(),
     );
   }

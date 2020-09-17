@@ -6,6 +6,15 @@ import 'package:google_fonts/google_fonts.dart';
 var mTitleStyle = GoogleFonts.inter(
     fontWeight: FontWeight.w600, color: mTitleColor, fontSize: 16);
 
+var mTitle = GoogleFonts.montserrat(
+    fontSize: 26, fontWeight: FontWeight.w700, color: mTitleColor);
+
+// Style for bottom nav text
+var otherTitle = GoogleFonts.bitter(fontSize: 12, fontWeight: FontWeight.w500);
+
+var mBottomText =
+    GoogleFonts.montserrat(fontSize: 12, fontWeight: FontWeight.w500);
+
 // Style for Discount Section
 var mMoreDiscountStyle = GoogleFonts.inter(
     fontSize: 12, fontWeight: FontWeight.w700, color: mBlueColor);
