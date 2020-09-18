@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kejar_recruitment/constants/constants.dart';
 
-class ProfileScreen extends StatefulWidget {
+class TestScreen extends StatefulWidget {
   @override
-  _ProfileScreenState createState() => _ProfileScreenState();
+  _TestScreenState createState() => _TestScreenState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> {
+class _TestScreenState extends State<TestScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +34,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     child: Container(
                         margin: const EdgeInsets.only(top: 20),
                         child: Text(
-                          'Ini halaman profile',
+                          'Ini halaman test',
                           style: GoogleFonts.montserrat(
                               fontSize: 28,
                               color: mTitleColor,

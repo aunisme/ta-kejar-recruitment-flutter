@@ -83,7 +83,7 @@ class HomeWidget extends StatelessWidget {
             ),
           ),
           SliverToBoxAdapter(
-            child: TestWidget(),
+            child: TestCardWidget(),
           )
         ],
       ),

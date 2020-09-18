@@ -9,3 +9,4 @@ const mBorderColor = Color(0xFFE8E8F3);
 const mFillColor = Color(0xFFFFFFFF);
 const mCardTitleColor = Color(0xFF2E4ECF);
 const mCardSubtitleColor = mTitleColor;
+const otherWhite = Color(0xFFF5F7FA);

@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../constants/constants.dart';
+import '../screens/screens.dart';
 
-class TestWidget extends StatelessWidget {
+class TestCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlatButton(
-      onPressed: () => print("test"),
+      onPressed: () => {
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) => TestScreen()),
+        )
+      },
       child: Row(
         children: [
           Container(
